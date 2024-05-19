@@ -1,3 +1,4 @@
+#namayesh esm bazikonan va pool anha
 def set_score(players):
     print("------------------------------")
     count = 1

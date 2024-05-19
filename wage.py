@@ -1,3 +1,4 @@
+#set kardan shart bazi
 def set_wage():
     try:
         wage = int(input("enter your wage: "))

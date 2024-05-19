@@ -3,12 +3,13 @@ from play import play
 from set_player import set_player
 from score import set_score
 from file_op import check
+from file_op import delete_save
 
 
 wage = ""
 players = []
 
-
+#safheye asliye ejraeie bazi
 def main_menu():
     try:
 
@@ -37,15 +38,24 @@ def main_menu():
                 case "2":
                     set_score(players)
                 case "3":
-                    print("1. set wage")
-                    print("2. set player")
+                    print("1. delete all data")
+                    print("2. set players")
+                    print("3. set wage")
                     print("press enter for back ...")
                     setting_o = input("please enter an option: ")
                     match setting_o:
+                        #pak kardan file
                         case "1":
-                            wage = set_wage()
+                            players = []
+                            wage = 0
+                            delete_save()
+                        #set kardan basikonan
                         case "2":
                             players = set_player()
+                        #set kardan shart bazi
+                        case "3":
+                            wage = set_wage()
+
                 case "4":
                     start = False
     except Exception as u:
